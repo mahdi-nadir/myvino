@@ -1,5 +1,8 @@
 <x-app-layout>
-    <h1>Users</h1>
+    <div class="introPage">
+        <h1>Liste des utilisateurs</h1>
+        <h4>Nombre des utilisateurs inscrits: <span>{{$users->count()}}</span></h4>
+    </div>
     @if ($users->count() > 0)
     <table id="example" class="table table-striped" style="width:100%">
         <tr>
@@ -27,10 +30,17 @@
         @endforeach
     </table>
     @else
-        Aucun utilisateur disponible
+        <div class="messageAucun">
+            Aucun utilisateur disponible
+        </div>
     @endif
-    {{  $users->links()  }}
+    <div class="optionsPage">
+        <a class="linkPage" href="{{ route('admin') }}">Retour à la page d'accueil</a>
+        {{  $users->links()  }}
+    </div>
 </x-app-layout>
+
+
 {{-- <script src="https://code.jquery.com/jquery-3.5.1.js"></script> --}}
 <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"></script>
