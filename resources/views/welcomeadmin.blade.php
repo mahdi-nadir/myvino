@@ -10,9 +10,20 @@
     <body> --}}
         {{-- <a href="{{ route('listecelliers') }}">Voir les celliers</a> --}}
         <x-app-layout>
-        <a href="{{ route('admin.users') }}">Utilisateurs</a><br>
-        <a href="{{ route('admin.celliers') }}">Celliers</a><br>
-        <a href="{{ route('updateSAQ') }}"><button>Importer des bouteilles de la SAQ</button></a>
+            <a href="{{ route('admin.users') }}">Utilisateurs</a><br>
+            <a href="{{ route('admin.celliers') }}">Celliers</a><br>
+            <a id="btnImportation" href="{{ route('updateSAQ') }}"><button>Importer des bouteilles de la SAQ</button></a>
         </x-app-layout>
+        <script>
+            // loader pour l'importation des bouteilles
+            document.getElementById("btnImportation").addEventListener("click", function() {
+                let seconds = 9;
+                setInterval(function() {
+                    seconds--;
+                    if (seconds < 0) seconds = 0;
+                    document.body.innerHTML = `<div class="loader" style="display:flex; height:100vh; align-items:center; justify-content:center">Importation des bouteilles en cours... ${seconds} secondes</div>`;
+                }, 1000);
+            });
+        </script>
 {{--     </body>
 </html> --}}
