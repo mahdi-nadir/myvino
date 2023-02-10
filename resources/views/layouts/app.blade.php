@@ -9,6 +9,7 @@
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
+        <script differ src="https://kit.fontawesome.com/918ba06b86.js" crossorigin="anonymous"></script>
 
         <!-- CSS-->
         @if (auth()->user()->role_id != 1)
