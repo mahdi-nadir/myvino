@@ -9,12 +9,11 @@
             @method('DELETE')
             <input type="submit" value="supprimer cellier">
         </form>
-        <a href="{{ route('admin.editCellier', [$cellier->user->id, $cellier->id]) }}">
-            <button class="myButton">Modifier</button>
-        </a>
+
         <a href="{{ route('admin.voirContenuCellier', [$cellier->user->id, $cellier->id]) }}">
             <button class="myButton">Détails</button>
         </a>
+        
         <table id="example" class="table table-striped" style="width:100%">
             @if ($bouteilles->count() > 0)
                 <tr>
