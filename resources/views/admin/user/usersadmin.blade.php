@@ -4,7 +4,7 @@
     <table id="example" class="table table-striped" style="width:100%">
         <tr>
             <th>Nom</th>
-            <th>Email</th>
+            <th>Courriel</th>
             <th class="di">Date d'inscription</th>
             <th class="nbc">Nombre de celliers</th>
             <th>Actions</th>
