@@ -11,7 +11,8 @@
         {{-- <a href="{{ route('listecelliers') }}">Voir les celliers</a> --}}
         <x-app-layout>
         <a href="{{ route('admin.users') }}">Utilisateurs</a><br>
-        <a href="{{ route('admin.celliers') }}">Celliers</a>
+        <a href="{{ route('admin.celliers') }}">Celliers</a><br>
+        <a href="{{ route('updateSAQ') }}"><button>Importer des bouteilles de la SAQ</button></a>
         </x-app-layout>
 {{--     </body>
 </html> --}}
