@@ -29,7 +29,7 @@
 }
 
 .iconLogout {
-    transition: transform .3s ease-in-out;
+    transition: transform .1s ease-in-out;
 }
 
 .iconLogout:hover {
@@ -48,6 +48,13 @@
     font-weight: bold;
     width: 300px;
     margin: 30px auto;
+    transition: transform .3s ease-in-out;
+}
+
+#btnImportation:hover,
+.btnAdmin:hover {
+    background-color: #b91a2a;
+    transform: scale(.98);
 }
 
 .contenuPageAdmin {
@@ -57,7 +64,32 @@
     transform: translate(-50%, -50%);
 }
 
-/* media query mobile */
+.supprBtn,
+.afficheBtn {
+    all: initial;
+}
+
+.supprBtn i,
+.afficheBtn i {
+    font-size: 16pt;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+.supprBtn:hover i,
+.afficheBtn:hover i {
+    color: #910717;
+}
+
+.tdAction {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 75px;
+}
+
 @media screen and (max-width: 600px) {
     .logoAdmin {
         width: 70px;
